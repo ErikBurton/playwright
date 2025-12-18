@@ -12,3 +12,6 @@ class LoginPage:
         self.username.fill(user)
         self.password.fill(password)
         self.submit.click()
+
+    def error_message(self):
+        return self.flash_message.text_content()
