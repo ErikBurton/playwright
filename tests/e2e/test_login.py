@@ -6,5 +6,4 @@ def test_user_can_login(page):
     login.navigate()
     login.login("tomsmith", "SuperSecretPassword!")
 
-    # login.expect_flash_contains("You logged into a secure area!")
-    login.expect_flash_contains("THIS WILL FAIL!")
+    login.expect_flash_contains("You logged into a secure area!")
