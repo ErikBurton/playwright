@@ -1,4 +1,6 @@
 from playwright.sync_api import expect
+
+
 class LoginPage:
     def __init__(self, page):
         self.page = page
@@ -17,4 +19,3 @@ class LoginPage:
 
     def expect_flash_contains(self, text):
         expect(self.flash_message).to_contain_text(text)
-

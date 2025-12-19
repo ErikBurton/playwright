@@ -1,5 +1,4 @@
 from pages.login_page import LoginPage
-from playwright.sync_api import expect
 
 
 def test_user_cannot_login_with_valid_credentials(page):
