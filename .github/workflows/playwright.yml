@@ -32,6 +32,14 @@ jobs:
           source venv/bin/activate
           pytest --html=report.html --self-contained-html
 
+      - name: Upload screenshots on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-screenshots
+          path: screenshots
+          retention-days: 30
+
       - name: Upload pytest HTML report
         if: always()
         uses: actions/upload-artifact@v4
